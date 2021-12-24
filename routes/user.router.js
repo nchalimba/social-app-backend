@@ -71,6 +71,10 @@ router.get("/", async (req, res) => {
     const query = userId ? { _id: userId } : { username };
     console.log(query);
     const user = await findUser(query);
+    if (!user) {
+      res.sendStatus(404);
+      return;
+    }
     const posts = await findPosts({ userId: user._id });
     user.amountPosts = posts?.length || 0;
     res
