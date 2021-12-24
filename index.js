@@ -36,7 +36,7 @@ app.use("/api/conversation", conversationRoute);
 app.use("/api/message", messageRoute);
 app.use("/api/file", fileRoute);
 
-const port = process.env.APP_PORT;
+const port = process.env.APP_PORT || 3000;
 const server = app.listen(port, async () => {
   try {
     logger.info(`App is running at http://localhost:${port}`);
