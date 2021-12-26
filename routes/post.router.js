@@ -11,6 +11,7 @@ import requireUser from "../middleware/requireUser.js";
 import { findUser } from "../service/user.service.js";
 const router = express.Router();
 const tmpUserId = "61a37f87672aa6a5aa424a71";
+
 //create post
 router.post("/", requireUser, async (req, res) => {
   const userId = res.locals.user._id;
@@ -182,10 +183,18 @@ router.get("/bookmarked", requireUser, async (req, res) => {
 router.get("/:id", requireUser, async (req, res) => {
   try {
     const post = await findPost({ _id: req.params.id });
-    res.status(200).json(post);
+    if (post) {
+      res.status(200).json(post);
+    } else {
+      res.sendStatus(404);
+    }
   } catch (error) {
-    logger.error(error);
-    res.sendStatus(500);
+    if (error.name === "CastError") {
+      res.sendStatus(400);
+    } else {
+      logger.error(error);
+      res.sendStatus(500);
+    }
   }
 });
 
