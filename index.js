@@ -6,6 +6,7 @@ import morgan from "morgan";
 import userRoute from "./routes/user.router.js";
 import authRoute from "./routes/auth.router.js";
 import fileRoute from "./routes/file.router.js";
+import commentRoute from "./routes/comment.router.js";
 import conversationRoute from "./routes/conversation.router.js";
 import messageRoute from "./routes/message.router.js";
 import logger from "./utils/logger.js";
@@ -35,6 +36,7 @@ app.use("/api/post", postRoute);
 app.use("/api/conversation", conversationRoute);
 app.use("/api/message", messageRoute);
 app.use("/api/file", fileRoute);
+app.use("/api/comment", commentRoute);
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, async () => {
