@@ -29,6 +29,10 @@ app.use(
     limits: { fileSize: 50 * 1024 * 1024 },
   })
 );
+app.use(express.static("public"));
+app.get("/", (req, res) => {
+  res.send("index.html");
+});
 
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);

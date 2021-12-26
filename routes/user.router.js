@@ -101,8 +101,8 @@ router.get("/current", requireUser, async (req, res) => {
 });
 
 //get followings
-router.get("/friends/:id", async (req, res) => {
-  const userId = req.params.id;
+router.get("/friends", async (req, res) => {
+  const userId = res.locals.user._id;
   try {
     const user = await findUser({ _id: userId });
     const friends = await Promise.all(
