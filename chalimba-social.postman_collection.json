@@ -2,996 +2,802 @@
 	"info": {
 		"_postman_id": "8c513f96-149b-4c7f-b086-013676b99468",
 		"name": "chalimba-social",
+		"description": "This is the api documentation of the chalimba-social REST API.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Get user",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "userId",
-						"value": "61a37fa7672aa6a5aa424a73",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/user?username=nicosone",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"user"
-					],
-					"query": [
-						{
-							"key": "username",
-							"value": "nicosone"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get user Copy",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "userId",
-						"value": "61a37fa7672aa6a5aa424a73",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/post/timeline",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"post",
-						"timeline"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get current user",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/user/current",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"user",
-						"current"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Timeline",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/post/timeline",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"post",
-						"timeline"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get file from firebase",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/file/social%2Fpublic%2Flogo-dark.png",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"file",
-						"social%2Fpublic%2Flogo-dark.png"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Follow user",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/user/61bf6606e4f400a238530af1/follow",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"user",
-						"61bf6606e4f400a238530af1",
-						"follow"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get post",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/post/61a38e6edc6963880db9114a",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"post",
-						"61a38e6edc6963880db9114a"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get comments of post",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/comment/?postId=61c65f39b99a6a7ac22e06c3",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"comment",
-						""
-					],
-					"query": [
-						{
-							"key": "postId",
-							"value": "61c65f39b99a6a7ac22e06c3"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create comment",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"postId\": \"61c65f39b99a6a7ac22e06c3\",\n    \"text\": \"First comment\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/comment/",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"comment",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get posts from user",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/post/profile/nadisone",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"post",
-						"profile",
-						"nadisone"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get liked posts",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/post/liked",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"post",
-						"liked"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Explore",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/post/explore",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"post",
-						"explore"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get bookmarked posts",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/post/bookmarked",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"post",
-						"bookmarked"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Login",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"email\": \"nico.chalimba@gmail.com\",\n    \"password\": \"12345678\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/auth/login",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"auth",
-						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create post",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"description\": \"Hey, this is my second post\",\n    \"img\": \"post/3.jpeg\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/post",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"post"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create Conversation",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"receiverId\": \"61a37fa7672aa6a5aa424a73\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/conversation",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"conversation"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Conversations",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"receiverId\": \"61a37fa7672aa6a5aa424a73\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/conversation",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"conversation"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get messages of conversation",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"receiverId\": \"61a37fa7672aa6a5aa424a73\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/message/61ba5a91c3452d5ea0dcff59",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"message",
-						"61ba5a91c3452d5ea0dcff59"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create Message",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"text\": \"Hi, this is my fifth message\",\n    \"conversationId\": \"61ba5a91c3452d5ea0dcff59\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/message",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"message"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Like post",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/post/61a38e6edc6963880db9114a/like",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"post",
-						"61a38e6edc6963880db9114a",
-						"like"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Mark post",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/post/61bf672a3f695970765c1c4f/bookmark",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"post",
-						"61bf672a3f695970765c1c4f",
-						"bookmark"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete post",
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/post/61a38ebcdc6963880db9114e",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"post",
-						"61a38ebcdc6963880db9114e"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update post",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"description\": \"Hey, this is my second post 2\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/post/61a38ebcdc6963880db9114e",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"post",
-						"61a38ebcdc6963880db9114e"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get user",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/user/61a37f87672aa6a5aa424a71",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"user",
-						"61a37f87672aa6a5aa424a71"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Unfollow user",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/user/61a389b672359dbb2927830a/unfollow",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"user",
-						"61a389b672359dbb2927830a",
-						"unfollow"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Register user",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"username\": \"nicosone\",\n    \"email\": \"nico.chalimba@gmail.com\",\n    \"firstName\": \"Nico Feliciano\",\n    \"lastName\": \"Chalimba\",\n    \"password\": \"12345678\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/auth/register",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"auth",
-						"register"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update user",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "{{accessToken}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "{{refreshToken}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"description\": \"hey its my new description\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/user/61a37f87672aa6a5aa424a71",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"user",
-						"61a37f87672aa6a5aa424a71"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete user",
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlkN2YyZTU2N2ZkMGMxMzJjZTMzYmIiLCJ1c2VybmFtZSI6Im5pY28iLCJlbWFpbCI6Im5pY29AZ21haWwuY29tIiwicHJvZmlsZVBpY3R1cmUiOiIiLCJjb3ZlclBpY3R1cmUiOiIiLCJmb2xsb3dlcnMiOltdLCJmb2xsb3dpbmciOltdLCJpc0FkbWluIjpmYWxzZSwiY3JlYXRlZEF0IjoiMjAyMS0xMS0yM1QyMzo1NDoyMi4zMTVaIiwidXBkYXRlZEF0IjoiMjAyMS0xMS0yM1QyMzo1NDoyMi4zMTVaIiwiX192IjowLCJzZXNzaW9uIjoiNjFhMzZkY2Y0ZWQ4YmY1MDM2YjFmYjZmIiwiaWF0IjoxNjM4MTAxMTA4LCJleHAiOjE2MzgxMDIwMDh9.NSwMDKn39V1w8lmuEr5WyLnIFd-w1mr715KBRzbPx7k7JEuFDFyPO9bavP1DsYntacquZn2UVNe17Syr9bIlSMJmU3lhrY5mO55DBqjEhddU2JHiDMZTIw8PvhDPUXuycn0Y5q2BfKAT1TZU12u3ACZex1X31eWFKqx3pFefj8M",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "x-refresh",
-						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTlkN2YyZTU2N2ZkMGMxMzJjZTMzYmIiLCJ1c2VybmFtZSI6Im5pY28iLCJlbWFpbCI6Im5pY29AZ21haWwuY29tIiwicHJvZmlsZVBpY3R1cmUiOiIiLCJjb3ZlclBpY3R1cmUiOiIiLCJmb2xsb3dlcnMiOltdLCJmb2xsb3dpbmciOltdLCJpc0FkbWluIjpmYWxzZSwiY3JlYXRlZEF0IjoiMjAyMS0xMS0yM1QyMzo1NDoyMi4zMTVaIiwidXBkYXRlZEF0IjoiMjAyMS0xMS0yM1QyMzo1NDoyMi4zMTVaIiwiX192IjowLCJzZXNzaW9uIjoiNjFhMzZkY2Y0ZWQ4YmY1MDM2YjFmYjZmIiwiaWF0IjoxNjM4MTAwNDMxLCJleHAiOjE2Njk2NTgwMzF9.SuG995SIIheaSZ6r7PUtBmzAsskCehMCBOZudDJ1De-VbzBJmEO9cUT4jk5kqZmaHAVJEneQpYVkbh5Yxidr-4NqAvMkv94yACFtSvams3h5bnYRa0VwCPlkgX9XAcDl3oNbuSR-fJWVGv9rcenUU2MlxShyKEoo2MAN7d-9y2o",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/user/619d7f2e567fd0c132ce33bb",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"user",
-						"619d7f2e567fd0c132ce33bb"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Log out",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/auth/logout",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"auth",
-						"logout"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Upload File",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "file",
-							"type": "file",
-							"src": "/Users/nicochalimbaprivat/Code/workspace_js/fullstack/social-media-app/client/public/assets/like.png"
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jane@doe.com\",\n    \"password\": \"test1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
-						{
-							"key": "name",
-							"value": "filename",
-							"type": "text",
-							"disabled": true
-						}
-					]
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/auth/login",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "This is the endpoint to authenticate a user with credentials. It must be called before any authorized endpoints and returns http only cookies containing the access and refresh token."
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/upload",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"upload"
-					]
+				{
+					"name": "Log out",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/auth/logout",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"johndoe\",\n    \"email\": \"john.doe@example.com\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"password\": \"test1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/auth/register",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"description": "Endpoints regarding user authentication."
 		},
 		{
-			"name": "Get friends",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{chalimba_social_endpoint}}/user/friends",
-					"host": [
-						"{{chalimba_social_endpoint}}"
-					],
-					"path": [
-						"user",
-						"friends"
-					]
+			"name": "User",
+			"item": [
+				{
+					"name": "Get current user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/user/current",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"user",
+								"current"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/user?username=janedoe",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "janedoe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Follow user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/user/61c65112bdad8fe90ae8463e/follow",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"user",
+								"61c65112bdad8fe90ae8463e",
+								"follow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/user/619d7f2e567fd0c132ce33bb",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"user",
+								"619d7f2e567fd0c132ce33bb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{accessToken}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "x-refresh",
+								"value": "{{refreshToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"This is an updated description.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/user/61c65112bdad8fe90ae8463e",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"user",
+								"61c65112bdad8fe90ae8463e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get friends",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/user/friends",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"user",
+								"friends"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/user/?userId=61c65112bdad8fe90ae8463e",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "61c65112bdad8fe90ae8463e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unfollow user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{accessToken}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "x-refresh",
+								"value": "{{refreshToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/user/61c65112bdad8fe90ae8463e/unfollow",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"user",
+								"61c65112bdad8fe90ae8463e",
+								"unfollow"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"description": "Endpoints regarding user and profile CRUD operations."
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Timeline",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/post/timeline",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"post",
+								"timeline"
+							]
+						},
+						"description": "This endpoint fetches all posts created by the current user or by persons who the user follows."
+					},
+					"response": []
+				},
+				{
+					"name": "Get post by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/post/61c65f39b99a6a7ac22e06c3",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"post",
+								"61c65f39b99a6a7ac22e06c3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get comments of post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/comment/?postId=61c65f39b99a6a7ac22e06c3",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"comment",
+								""
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "61c65f39b99a6a7ac22e06c3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postId\": \"61c65f39b99a6a7ac22e06c3\",\n    \"text\": \"Second comment\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/comment/",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"comment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get posts from user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/post/profile/janedoe",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"post",
+								"profile",
+								"janedoe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get liked posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/post/liked",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"post",
+								"liked"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Explore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/post/explore",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"post",
+								"explore"
+							]
+						},
+						"description": "This endpoint fetches all posts ever created."
+					},
+					"response": []
+				},
+				{
+					"name": "Get bookmarked posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/post/bookmarked",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"post",
+								"bookmarked"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Hey, this is my second post\",\n    \"img\": \"post/3.jpeg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/post",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/post/61c8f29e2887d8be65613212/like",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"post",
+								"61c8f29e2887d8be65613212",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/post/61c8f29e2887d8be65613212/bookmark",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"post",
+								"61c8f29e2887d8be65613212",
+								"bookmark"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/post/61c65f39b99a6a7ac22e06c3",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"post",
+								"61c65f39b99a6a7ac22e06c3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Hey, this is my second post 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/post/61c8f29e2887d8be65613212",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"post",
+								"61c8f29e2887d8be65613212"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints regarding CRUD operations for posts."
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "Get file",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{accessToken}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "x-refresh",
+								"value": "{{refreshToken}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/file/public%2Flogo-dark.png",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"file",
+								"public%2Flogo-dark.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/nicochalimbaprivat/Code/workspace_js/fullstack/social-media-app/client/public/assets/like.png"
+								},
+								{
+									"key": "name",
+									"value": "like.png",
+									"type": "text"
+								},
+								{
+									"key": "folder",
+									"value": "public",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/file/",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"file",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message",
+			"item": [
+				{
+					"name": "Create Conversation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{accessToken}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "x-refresh",
+								"value": "{{refreshToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"receiverId\": \"61a37fa7672aa6a5aa424a73\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/conversation",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"conversation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Conversations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{accessToken}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "x-refresh",
+								"value": "{{refreshToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"receiverId\": \"61a37fa7672aa6a5aa424a73\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/conversation",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"conversation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get messages of conversation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{accessToken}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "x-refresh",
+								"value": "{{refreshToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"receiverId\": \"61a37fa7672aa6a5aa424a73\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/message/61ba5a91c3452d5ea0dcff59",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"message",
+								"61ba5a91c3452d5ea0dcff59"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Message",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{accessToken}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "x-refresh",
+								"value": "{{refreshToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Hi, this is my fifth message\",\n    \"conversationId\": \"61ba5a91c3452d5ea0dcff59\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chalimba_social_endpoint}}/message",
+							"host": [
+								"{{chalimba_social_endpoint}}"
+							],
+							"path": [
+								"message"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints regarding instant messaging feature (not yet integrated to frontend)."
 		}
 	],
 	"event": [
