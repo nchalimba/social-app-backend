@@ -7,6 +7,7 @@ import {
 import logger from "../utils/logger.js";
 import requireUser from "../middleware/requireUser.js";
 import { findAndUpdatePost, findPost } from "../service/post.service.js";
+import { findUser } from "../service/user.service.js";
 
 const router = express.Router();
 
@@ -45,6 +46,7 @@ router.get("/:id", requireUser, async (req, res) => {
   } catch (error) {}
 });
 
+//find comments by post id
 router.get("/", requireUser, async (req, res) => {
   const postId = req.query.postId;
   if (!postId) {
@@ -64,7 +66,18 @@ router.get("/", requireUser, async (req, res) => {
       res.sendStatus(404);
       return;
     }
-    res.status(200).json(comments);
+
+    //populate comments with user data
+    const payload = await Promise.all(
+      comments.map(async (comment) => {
+        const { profilePicture, username } = await findUser({
+          _id: comment.userId,
+        });
+        return { profilePicture, username, ...comment._doc };
+      })
+    );
+
+    res.status(200).json(payload);
   } catch (error) {}
 });
 
