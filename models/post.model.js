@@ -25,6 +25,10 @@ const PostSchema = mongoose.Schema(
       type: Array,
       default: [],
     },
+    comments: {
+      type: Array,
+      default: [],
+    },
     location: {
       type: String,
     },
