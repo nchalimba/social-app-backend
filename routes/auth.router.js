@@ -64,9 +64,9 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.post("/logout", requireUser, async (req, res) => {
-  const sessionId = res.locals.user.session;
-  await updateSession({ _id: sessionId }, { valid: false });
+router.post("/logout", async (req, res) => {
+  const sessionId = res.locals.user?.session;
+  if (sessionId) await updateSession({ _id: sessionId }, { valid: false });
   res.clearCookie("accessToken");
   res.clearCookie("refreshToken");
   res.sendStatus(200);
