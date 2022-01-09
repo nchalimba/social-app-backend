@@ -651,7 +651,8 @@
 							{
 								"key": "x-refresh",
 								"value": "{{refreshToken}}",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
@@ -692,7 +693,8 @@
 							{
 								"key": "x-refresh",
 								"value": "{{refreshToken}}",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
@@ -733,7 +735,8 @@
 							{
 								"key": "x-refresh",
 								"value": "{{refreshToken}}",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
@@ -772,7 +775,8 @@
 							{
 								"key": "x-refresh",
 								"value": "{{refreshToken}}",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"body": {
@@ -818,6 +822,12 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "chalimba_social_endpoint",
+			"value": "https://chalimba-social.herokuapp.com/api"
 		}
 	]
 }
