@@ -68,7 +68,7 @@ Endpoints regarding user authentication.
 ```bash
 Method: POST
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/auth/logout
+URL: https://chalimba-social.glitch.me/api/auth/logout
 ```
 
 
@@ -84,7 +84,7 @@ This is the endpoint to authenticate a user with credentials. It must be called 
 ```bash
 Method: POST
 Type: RAW
-URL: https://chalimba-social.herokuapp.com/api/auth/login
+URL: https://chalimba-social.glitch.me/api/auth/login
 ```
 
 
@@ -109,7 +109,7 @@ URL: https://chalimba-social.herokuapp.com/api/auth/login
 ```bash
 Method: POST
 Type: RAW
-URL: https://chalimba-social.herokuapp.com/api/auth/register
+URL: https://chalimba-social.glitch.me/api/auth/register
 ```
 
 
@@ -141,7 +141,7 @@ URL: https://chalimba-social.herokuapp.com/api/auth/register
 ```bash
 Method: GET
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/file/public%2Flogo-dark.png
+URL: https://chalimba-social.glitch.me/api/file/public%2Flogo-dark.png
 ```
 
 
@@ -155,7 +155,7 @@ URL: https://chalimba-social.herokuapp.com/api/file/public%2Flogo-dark.png
 ```bash
 Method: POST
 Type: FORMDATA
-URL: https://chalimba-social.herokuapp.com/api/file/
+URL: https://chalimba-social.glitch.me/api/file/
 ```
 
 
@@ -184,7 +184,7 @@ Endpoints regarding instant messaging feature (not yet integrated to frontend).
 ```bash
 Method: POST
 Type: RAW
-URL: https://chalimba-social.herokuapp.com/api/conversation
+URL: https://chalimba-social.glitch.me/api/conversation
 ```
 
 
@@ -208,7 +208,7 @@ URL: https://chalimba-social.herokuapp.com/api/conversation
 ```bash
 Method: POST
 Type: RAW
-URL: https://chalimba-social.herokuapp.com/api/message
+URL: https://chalimba-social.glitch.me/api/message
 ```
 
 
@@ -233,7 +233,7 @@ URL: https://chalimba-social.herokuapp.com/api/message
 ```bash
 Method: GET
 Type: RAW
-URL: https://chalimba-social.herokuapp.com/api/conversation
+URL: https://chalimba-social.glitch.me/api/conversation
 ```
 
 
@@ -257,7 +257,7 @@ URL: https://chalimba-social.herokuapp.com/api/conversation
 ```bash
 Method: GET
 Type: RAW
-URL: https://chalimba-social.herokuapp.com/api/message/61ba5a91c3452d5ea0dcff59
+URL: https://chalimba-social.glitch.me/api/message/61ba5a91c3452d5ea0dcff59
 ```
 
 
@@ -286,7 +286,7 @@ Endpoints regarding CRUD operations for posts.
 ```bash
 Method: POST
 Type: RAW
-URL: https://chalimba-social.herokuapp.com/api/comment/
+URL: https://chalimba-social.glitch.me/api/comment/
 ```
 
 
@@ -311,7 +311,7 @@ URL: https://chalimba-social.herokuapp.com/api/comment/
 ```bash
 Method: POST
 Type: RAW
-URL: https://chalimba-social.herokuapp.com/api/post
+URL: https://chalimba-social.glitch.me/api/post
 ```
 
 
@@ -336,7 +336,7 @@ URL: https://chalimba-social.herokuapp.com/api/post
 ```bash
 Method: DELETE
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/post/61c65f39b99a6a7ac22e06c3
+URL: https://chalimba-social.glitch.me/api/post/61c65f39b99a6a7ac22e06c3
 ```
 
 
@@ -352,7 +352,7 @@ This endpoint fetches all posts ever created.
 ```bash
 Method: GET
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/post/explore
+URL: https://chalimba-social.glitch.me/api/post/explore
 ```
 
 
@@ -366,7 +366,7 @@ URL: https://chalimba-social.herokuapp.com/api/post/explore
 ```bash
 Method: GET
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/post/bookmarked
+URL: https://chalimba-social.glitch.me/api/post/bookmarked
 ```
 
 
@@ -380,7 +380,7 @@ URL: https://chalimba-social.herokuapp.com/api/post/bookmarked
 ```bash
 Method: GET
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/comment/
+URL: https://chalimba-social.glitch.me/api/comment/
 ```
 
 
@@ -402,7 +402,7 @@ URL: https://chalimba-social.herokuapp.com/api/comment/
 ```bash
 Method: GET
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/post/liked
+URL: https://chalimba-social.glitch.me/api/post/liked
 ```
 
 
@@ -416,7 +416,7 @@ URL: https://chalimba-social.herokuapp.com/api/post/liked
 ```bash
 Method: GET
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/post/61c65f39b99a6a7ac22e06c3
+URL: https://chalimba-social.glitch.me/api/post/61c65f39b99a6a7ac22e06c3
 ```
 
 
@@ -430,7 +430,7 @@ URL: https://chalimba-social.herokuapp.com/api/post/61c65f39b99a6a7ac22e06c3
 ```bash
 Method: GET
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/post/profile/janedoe
+URL: https://chalimba-social.glitch.me/api/post/profile/janedoe
 ```
 
 
@@ -444,7 +444,7 @@ URL: https://chalimba-social.herokuapp.com/api/post/profile/janedoe
 ```bash
 Method: PUT
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/post/61c8f29e2887d8be65613212/like
+URL: https://chalimba-social.glitch.me/api/post/61c8f29e2887d8be65613212/like
 ```
 
 
@@ -458,7 +458,7 @@ URL: https://chalimba-social.herokuapp.com/api/post/61c8f29e2887d8be65613212/lik
 ```bash
 Method: PUT
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/post/61c8f29e2887d8be65613212/bookmark
+URL: https://chalimba-social.glitch.me/api/post/61c8f29e2887d8be65613212/bookmark
 ```
 
 
@@ -474,7 +474,7 @@ This endpoint fetches all posts created by the current user or by persons who th
 ```bash
 Method: GET
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/post/timeline
+URL: https://chalimba-social.glitch.me/api/post/timeline
 ```
 
 
@@ -488,7 +488,7 @@ URL: https://chalimba-social.herokuapp.com/api/post/timeline
 ```bash
 Method: PUT
 Type: RAW
-URL: https://chalimba-social.herokuapp.com/api/post/61c8f29e2887d8be65613212
+URL: https://chalimba-social.glitch.me/api/post/61c8f29e2887d8be65613212
 ```
 
 
@@ -517,7 +517,7 @@ Endpoints regarding user and profile CRUD operations.
 ```bash
 Method: DELETE
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/user/619d7f2e567fd0c132ce33bb
+URL: https://chalimba-social.glitch.me/api/user/619d7f2e567fd0c132ce33bb
 ```
 
 
@@ -531,7 +531,7 @@ URL: https://chalimba-social.herokuapp.com/api/user/619d7f2e567fd0c132ce33bb
 ```bash
 Method: PUT
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/user/61c65112bdad8fe90ae8463e/follow
+URL: https://chalimba-social.glitch.me/api/user/61c65112bdad8fe90ae8463e/follow
 ```
 
 
@@ -545,7 +545,7 @@ URL: https://chalimba-social.herokuapp.com/api/user/61c65112bdad8fe90ae8463e/fol
 ```bash
 Method: GET
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/user/current
+URL: https://chalimba-social.glitch.me/api/user/current
 ```
 
 
@@ -559,7 +559,7 @@ URL: https://chalimba-social.herokuapp.com/api/user/current
 ```bash
 Method: GET
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/user/friends
+URL: https://chalimba-social.glitch.me/api/user/friends
 ```
 
 
@@ -573,7 +573,7 @@ URL: https://chalimba-social.herokuapp.com/api/user/friends
 ```bash
 Method: GET
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/user/
+URL: https://chalimba-social.glitch.me/api/user/
 ```
 
 
@@ -595,7 +595,7 @@ URL: https://chalimba-social.herokuapp.com/api/user/
 ```bash
 Method: GET
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/user
+URL: https://chalimba-social.glitch.me/api/user
 ```
 
 
@@ -617,7 +617,7 @@ URL: https://chalimba-social.herokuapp.com/api/user
 ```bash
 Method: PUT
 Type: 
-URL: https://chalimba-social.herokuapp.com/api/user/61c65112bdad8fe90ae8463e/unfollow
+URL: https://chalimba-social.glitch.me/api/user/61c65112bdad8fe90ae8463e/unfollow
 ```
 
 
@@ -631,7 +631,7 @@ URL: https://chalimba-social.herokuapp.com/api/user/61c65112bdad8fe90ae8463e/unf
 ```bash
 Method: PUT
 Type: RAW
-URL: https://chalimba-social.herokuapp.com/api/user/61c65112bdad8fe90ae8463e
+URL: https://chalimba-social.glitch.me/api/user/61c65112bdad8fe90ae8463e
 ```
 
 
@@ -650,7 +650,7 @@ URL: https://chalimba-social.herokuapp.com/api/user/61c65112bdad8fe90ae8463e
 
 | Key | Value | Type |
 | --- | ------|-------------|
-| chalimba_social_endpoint | https://chalimba-social.herokuapp.com/api |  |
+| chalimba_social_endpoint | https://chalimba-social.glitch.me/api |  |
 
 
 

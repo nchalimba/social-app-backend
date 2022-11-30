@@ -827,7 +827,7 @@
 	"variable": [
 		{
 			"key": "chalimba_social_endpoint",
-			"value": "https://chalimba-social.herokuapp.com/api"
+			"value": "https://chalimba-social.glitch.me/api"
 		}
 	]
 }
